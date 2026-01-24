@@ -1,5 +1,13 @@
 # @numeric-text/react
 
+## 0.1.1
+
+### Patch Changes
+
+- dce23bb: fix: resolve workspace dependencies for external usage
+- Updated dependencies [dce23bb]
+  - @numeric-text/core@0.1.1
+
 ## 0.1.0
 
 ### Minor Changes
