@@ -89,7 +89,7 @@ import { NumericText } from '@numeric-text/vue';
 
 Ever since SwiftUI introduced `.numericText`, I have been waiting for a similar solution to arrive on the web. It is an ideal way to draw a user's attention to interface changes — be it a status update, a price change, or a counter increment.
 
-[!SwiftUI.numericText](https://github.com/user-attachments/assets/03053492-582e-4947-a330-1af362b161d7)
+![SwiftUI.numericText](https://github.com/user-attachments/assets/03053492-582e-4947-a330-1af362b161d7)
 
 ### The Limitations of Existing Solutions
 
@@ -97,7 +97,7 @@ Until now, the closest web alternative was [number-flow](https://number-flow.bar
 
 Another approach, often referred to as "TextMorph" (popularized by components in [motion-primitives](https://motion-primitives.com/docs/text-morph)), takes a fundamentally different path. To the best of my knowledge, this technique originated in the [Family](https://family.co/) app. It works by assigning unique IDs to every character and animating their individual layout transitions.
 
-[!TextMorph from Family](https://github.com/user-attachments/assets/f5a571b3-6b61-4e31-9776-d2f1c9921cb7)
+![TextMorph from Family](https://github.com/user-attachments/assets/f5a571b3-6b61-4e31-9776-d2f1c9921cb7)
 
 However, applying this specific logic to general UI text has significant drawbacks:
 
@@ -112,8 +112,8 @@ Driven by the lack of a proper SwiftUI-like alternative, I built `NumericText`. 
 
 Under the hood, `NumericText` uses a _LCP_ diffing algorithm. Unlike character-level morphing, this ensures the transition feels grounded and predictable. Letters don't fly randomly, they stay anchored where they belong logically.
 
-[!TextMorph/NumericText comparing](https://github.com/user-attachments/assets/f1234f3e-c336-4eb1-a263-3d47f0560b5c)
+![TextMorph/NumericText comparing](https://github.com/user-attachments/assets/f1234f3e-c336-4eb1-a263-3d47f0560b5c)
 
 This diffing logic is nearly identical to the one used in SwiftUI. By dividing the text into three logical sections — we only need to animate the layout transitions of the sections themselves. This approach delivers better performance, especially on low-end mobile devices.
 
-[!NumericText sections](https://github.com/user-attachments/assets/5f5dd2fb-1876-46b9-b447-61eea59b0c99)
+![NumericText sections](https://github.com/user-attachments/assets/5f5dd2fb-1876-46b9-b447-61eea59b0c99)
