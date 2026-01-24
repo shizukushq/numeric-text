@@ -6,7 +6,8 @@
     "dev": "bun run --filter './packages/*' dev",
     "format": "prettier --write .",
     "ci:version": "changeset version && bun i && git add --all",
-    "ci:release": "bun run build && changeset publish"
+    "ci:release": "bun run build && changeset publish",
+    "size": "bun run build && bun scripts/size.ts"
   },
   "devDependencies": {
     "@changesets/cli": "^2.29.8",
