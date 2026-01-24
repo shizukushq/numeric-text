@@ -3,7 +3,7 @@
 [![NPM Version](https://img.shields.io/npm/v/@numeric-text/core.svg)](https://npmjs.com/package/@numeric-text/core)
 [![Bundle Size 2.38KB](https://img.shields.io/badge/bundle_size-2.38KB-black)](https://bundlephobia.com/package/@numeric-text/core)
 
-A lightweight, framework-agnostic component for text transitions. It is a dedicated attempt to replicate the behavior and feel of SwiftUI's [.numericText](<https://developer.apple.com/documentation/swiftui/contenttransition/numerictext(value:)>) for the web.
+A lightweight, framework-agnostic component for text transitions. As the name suggests, this is a dedicated attempt to replicate the behavior and feel of SwiftUI's [.numericText](<https://developer.apple.com/documentation/swiftui/contenttransition/numerictext(value:)>) for the web.
 
 ## Features
 
@@ -101,7 +101,7 @@ Another approach, often referred to as "TextMorph" (popularized by components in
 
 However, applying this specific logic to general UI text has significant drawbacks:
 
-- **Visual Chaos**: Characters often fly across the screen in a confusing manner. In a transition from "Creative" to "Craft", the 'a' might fly from the middle of the first word to the end of the second. It lacks a sense of structural cohesion and feels disjointed.
+- **Visual Chaos**: Characters often fly across the screen in a confusing manner. During the transition from "Creative" to "Craft", letters rearrange: the fourth letter "a" moves to replace the "e", the fifth letter "t" flies to the end of "Craft", etc. It lacks a sense of structural cohesion and feels disjointed.
 - **Performance Heavy**: Animating the layout of _every single character_ is expensive on lower-end mobile devices.
 
 It is quite surprising that this "fly-everywhere" logic was so heavily promoted in [@emilkowalski](https://x.com/emilkowalski)'s [animations.dev](https://animations.dev/), considering its impact on text legibility and performance during transitions.
