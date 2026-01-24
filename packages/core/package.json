@@ -1,0 +1,38 @@
+{
+  "name": "@numeric-text/core",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "Framework-agnostic animated numeric text web component",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shizukushq/numeric-text.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shizukushq/numeric-text/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./ssr.css": "./dist/ssr.css"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup && cp src/ssr.css dist/ssr.css",
+    "dev": "tsup --watch"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.1",
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "@numeric-text/react",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "React wrapper for @numeric-text/core",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shizukushq/numeric-text.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shizukushq/numeric-text/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "bunchee",
+    "dev": "bunchee --watch"
+  },
+  "peerDependencies": {
+    "react": "^18 || ^19"
+  },
+  "dependencies": {
+    "@numeric-text/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.9",
+    "bunchee": "^6.9.4",
+    "react": "^19.2.3",
+    "typescript": "^5.0.0"
+  }
+}

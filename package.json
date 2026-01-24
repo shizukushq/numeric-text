@@ -1,0 +1,21 @@
+{
+  "name": "numeric-text",
+  "private": true,
+  "scripts": {
+    "build": "bun run --filter './packages/*' build",
+    "dev": "bun run --filter './packages/*' dev",
+    "format": "prettier --write .",
+    "ci:version": "changeset version && bun i && git add --all",
+    "ci:release": "bun run build && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.8",
+    "@types/bun": "latest",
+    "prettier": "^3.8.1",
+    "prettier-plugin-svelte": "^3.4.1",
+    "typescript": "^5"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

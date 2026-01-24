@@ -1,0 +1,45 @@
+{
+  "name": "@numeric-text/vue",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "Vue wrapper for @numeric-text/core",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shizukushq/numeric-text.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shizukushq/numeric-text/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch"
+  },
+  "peerDependencies": {
+    "vue": "^3"
+  },
+  "dependencies": {
+    "@numeric-text/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.3",
+    "vite": "^7.3.1",
+    "vite-plugin-dts": "^4.5.4",
+    "vue": "^3.3.0"
+  }
+}
