@@ -1,5 +1,11 @@
 # @numeric-text/core
 
+## 0.1.2
+
+### Patch Changes
+
+- a8e39fb: fix: workspace dependencies
+
 ## 0.1.1
 
 ### Patch Changes
