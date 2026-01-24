@@ -22,6 +22,9 @@ jobs:
         with:
           bun-version: latest
 
+      - name: Setup npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+
       - run: bun i --frozen-lockfile
 
       - name: Build
