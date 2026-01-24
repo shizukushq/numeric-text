@@ -1,5 +1,13 @@
 # @numeric-text/svelte
 
+## 0.1.3
+
+### Patch Changes
+
+- 2d03576: fix: correct workspace dependency resolution in published packages
+- Updated dependencies [2d03576]
+  - @numeric-text/core@0.1.3
+
 ## 0.1.2
 
 ### Patch Changes

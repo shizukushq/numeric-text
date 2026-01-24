@@ -14,7 +14,7 @@
     },
     "packages/core": {
       "name": "@numeric-text/core",
-      "version": "0.0.1",
+      "version": "0.1.3",
       "devDependencies": {
         "tsup": "^8.5.1",
         "typescript": "^5",
@@ -22,7 +22,7 @@
     },
     "packages/react": {
       "name": "@numeric-text/react",
-      "version": "0.0.1",
+      "version": "0.1.3",
       "dependencies": {
         "@numeric-text/core": "workspace:*",
       },
@@ -38,7 +38,7 @@
     },
     "packages/svelte": {
       "name": "@numeric-text/svelte",
-      "version": "0.0.1",
+      "version": "0.1.3",
       "dependencies": {
         "@numeric-text/core": "workspace:*",
       },
@@ -56,7 +56,7 @@
     },
     "packages/vue": {
       "name": "@numeric-text/vue",
-      "version": "0.0.1",
+      "version": "0.1.3",
       "dependencies": {
         "@numeric-text/core": "workspace:*",
       },
