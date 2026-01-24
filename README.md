@@ -62,7 +62,7 @@ npm install @numeric-text/vue
 ```tsx
 import { NumericText } from '@numeric-text/react';
 
-<NumericText value="text" />;
+<NumericText value="text" />
 ```
 
 ### Vue
