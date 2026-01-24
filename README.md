@@ -11,6 +11,7 @@ A lightweight, framework-agnostic component for text transitions. As the name su
 - **Zero Dependencies**: No third-party runtime dependencies.
 - **Ultra-Lightweight**: Only **2.38KB** (gzipped) for the core package.
 - **High Performance**: Optimized for **120fps** animations.
+- **SSR Support**: Works with Server-Side Rendering.
 - **A11y**:
   - **Screen Reader Ready**: Fully accessible with `aria-label` and `role="img"`.
   - **Universal**: Supports all languages and character sets via `Intl.Segmenter`.
