@@ -5,7 +5,7 @@
     "build": "bun run --filter './packages/*' build",
     "dev": "bun run --filter './packages/*' dev",
     "format": "prettier --write .",
-    "ci:version": "changeset version && bun i && git add --all",
+    "ci:version": "changeset version && bun update && git add --all",
     "ci:publish": "for dir in packages/*; do (cd \"$dir\" && bun publish || true); done && changeset tag",
     "size": "bun run build && bun scripts/size.ts"
   },
