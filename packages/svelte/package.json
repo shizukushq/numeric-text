@@ -1,7 +1,7 @@
 {
   "name": "@numeric-text/svelte",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Svelte wrapper for @numeric-text/core",
   "license": "MIT",
   "repository": {
