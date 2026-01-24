@@ -47,5 +47,15 @@
     "prettier-plugin-svelte": "^3.4.1",
     "svelte-check": "^4.3.5",
     "typescript": "^5.9.3"
-  }
+  },
+  "keywords": [
+    "swiftui",
+    "NumericText",
+    "numeric-text",
+    "numericText",
+    "animation",
+    "animated-text",
+    "animated-number",
+    "text"
+  ]
 }

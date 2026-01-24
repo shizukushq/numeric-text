@@ -41,5 +41,15 @@
     "bunchee": "^6.9.4",
     "react": "^19.2.3",
     "typescript": "^5.0.0"
-  }
+  },
+  "keywords": [
+    "swiftui",
+    "NumericText",
+    "numeric-text",
+    "numericText",
+    "animation",
+    "animated-text",
+    "animated-number",
+    "text"
+  ]
 }
