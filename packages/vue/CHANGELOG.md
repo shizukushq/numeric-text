@@ -1,5 +1,13 @@
 # @numeric-text/vue
 
+## 0.1.2
+
+### Patch Changes
+
+- a8e39fb: fix: workspace dependencies
+- Updated dependencies [a8e39fb]
+  - @numeric-text/core@0.1.2
+
 ## 0.1.1
 
 ### Patch Changes
