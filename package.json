@@ -6,7 +6,7 @@
     "dev": "bun run --filter './packages/*' dev",
     "format": "prettier --write .",
     "ci:version": "changeset version && bun i && git add --all",
-    "ci:release": "bun run build && changeset publish",
+    "ci:publish": "for dir in packages/*; do (cd \"$dir\" && bun publish || true); done && changeset tag",
     "size": "bun run build && bun scripts/size.ts"
   },
   "devDependencies": {

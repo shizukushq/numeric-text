@@ -24,11 +24,14 @@ jobs:
 
       - run: bun i --frozen-lockfile
 
+      - name: Build
+        run: bun run build
+
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: bun run ci:release
+          publish: bun run ci:publish
           version: bun run ci:version
           commit: 'chore: version packages'
           title: 'chore: version packages'
