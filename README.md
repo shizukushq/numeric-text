@@ -1,1 +1,119 @@
-# numeric-text
+# NumericText
+
+[![NPM Version](https://img.shields.io/npm/v/@numeric-text/core.svg)](https://npmjs.com/package/@numeric-text/core)
+[![Bundle Size 2.38KB](https://img.shields.io/badge/bundle_size-2.38KB-black)](https://bundlephobia.com/package/@numeric-text/core)
+
+A lightweight, framework-agnostic component for text transitions. It is a dedicated attempt to replicate the behavior and feel of SwiftUI's [.numericText](<https://developer.apple.com/documentation/swiftui/contenttransition/numerictext(value:)>) for the web.
+
+## Features
+
+- **Framework-agnostic**: Built with native Web Components. Seamlessly integrates with any library or plain HTML.
+- **Zero Dependencies**: No third-party runtime dependencies.
+- **Ultra-Lightweight**: Only **2.38KB** (gzipped) for the core package.
+- **High Performance**: Optimized for **120fps** animations.
+- **A11y**:
+  - **Screen Reader Ready**: Fully accessible with `aria-label` and `role="img"`.
+  - **Universal**: Supports all languages and character sets via `Intl.Segmenter`.
+  - **RTL Support**: Built-in support for Right-to-Left languages like Arabic or Hebrew.
+  - **Respects Preferences**: Automatically disables animations for users with `prefers-reduced-motion`.
+
+## Installation
+
+```bash
+# Core (Vanilla JS)
+npm install @numeric-text/core
+
+# Framework Wrappers
+npm install @numeric-text/svelte
+npm install @numeric-text/react
+npm install @numeric-text/vue
+```
+
+## Usage
+
+### Vanilla JS
+
+```html
+<numeric-text></numeric-text>
+
+<script type="module">
+  import '@numeric-text/core';
+  // Using CDN (without bundler):
+  // import 'https://esm.sh/@numeric-text/core'
+
+  const text = document.querySelector('numeric-text');
+  // set initial value
+  text.value = 'text'; // or text.update('text', false)
+</script>
+```
+
+### Svelte
+
+```svelte
+<script lang="ts">
+  import { NumericText } from '@numeric-text/svelte';
+</script>
+
+<NumericText value="text" />
+```
+
+### React
+
+```tsx
+import { NumericText } from '@numeric-text/react';
+
+<NumericText value="text" />;
+```
+
+### Vue
+
+```vue
+<script lang="ts" setup>
+import { NumericText } from '@numeric-text/vue';
+</script>
+
+<NumericText value="text" />
+```
+
+## API Reference
+
+| Prop                      | Type               | Default                            | Description                                                                                                    |
+| :------------------------ | :----------------- | :--------------------------------- | :------------------------------------------------------------------------------------------------------------- |
+| `value`                   | `string \| number` | `""`                               | The text or number to display.                                                                                 |
+| `animated`                | `boolean`          | `true`                             | (Wrappers only) Whether to animate changes. For Vanilla JS, use `text.update(val, false)` for instant updates. |
+| `trend`                   | `1 \| 0 \| -1`     | `0`                                | Animation direction (1: up, -1: down, 0: auto-detect based on numbers).                                        |
+| `transition`              | `Transition`       | `{ duration: 550, easing: '...' }` | Custom duration and easing function.                                                                           |
+| `respectMotionPreference` | `boolean`          | `true`                             | If true, disables animation for users with `prefers-reduced-motion`.                                           |
+
+## Why?
+
+Ever since SwiftUI introduced `.numericText`, I have been waiting for a similar solution to arrive on the web. It is an ideal way to draw a user's attention to interface changes — be it a status update, a price change, or a counter increment.
+
+https://github.com/user-attachments/assets/03053492-582e-4947-a330-1af362b161d7
+
+### The Limitations of Existing Solutions
+
+Until now, the closest web alternative was [number-flow](https://number-flow.barvian.me/). While it is visually stunning and elegant, it is strictly limited to animating **numbers**. SwiftUI’s implementation, however, is much more versatile, capable of morphing arbitrary text strings.
+
+Another approach, often referred to as "TextMorph" (popularized by components in [motion-primitives](https://motion-primitives.com/docs/text-morph)), takes a fundamentally different path. To the best of my knowledge, this technique originated in the [Family](https://family.co/) app. It works by assigning unique IDs to every character and animating their individual layout transitions.
+
+https://github.com/user-attachments/assets/f5a571b3-6b61-4e31-9776-d2f1c9921cb7
+
+However, applying this specific logic to general UI text has significant drawbacks:
+
+- **Visual Chaos**: Characters often fly across the screen in a confusing manner. In a transition from "Creative" to "Craft", the 'a' might fly from the middle of the first word to the end of the second. It lacks a sense of structural cohesion and feels disjointed.
+- **Performance Heavy**: Animating the layout of _every single character_ is expensive on lower-end mobile devices.
+
+It is quite surprising that this "fly-everywhere" logic was so heavily promoted in [@emilkowalski](https://x.com/emilkowalski)'s [animations.dev](https://animations.dev/), considering its impact on text legibility and performance during transitions.
+
+### The NumericText Approach
+
+Driven by the lack of a proper SwiftUI-like alternative, I built `NumericText`. It handles both numbers and text, providing a cohesive feel for text transitions, and achieving a visual fluidity similar to [number-flow](https://number-flow.barvian.me/) when animating numbers.
+
+Under the hood, `NumericText` uses a _LCP_ diffing algorithm. Unlike character-level morphing, this ensures the transition feels grounded and predictable. Letters don't fly randomly, they stay anchored where they belong logically.
+
+https://github.com/user-attachments/assets/f1234f3e-c336-4eb1-a263-3d47f0560b5c
+
+This diffing logic is nearly identical to the one used in SwiftUI. By dividing the text into three logical sections — we only need to animate the layout transitions of the sections themselves. This approach delivers better performance, especially on low-end mobile devices.
+
+https://github.com/user-attachments/assets/5f5dd2fb-1876-46b9-b447-61eea59b0c99
