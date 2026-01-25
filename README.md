@@ -7,7 +7,7 @@ A lightweight, framework-agnostic component for text transitions. As the name su
 
 ## Features
 
-- **Framework-agnostic**: Built with native Web Components. Seamlessly integrates with any library or plain HTML.
+- **Framework-agnostic**: Built with native Web Components. Seamlessly integrates with any library or Vanilla JS.
 - **Zero Dependencies**: No third-party runtime dependencies.
 - **Ultra-Lightweight**: Only **2.38KB** (gzipped) for the core package.
 - **High Performance**: Optimized for **120fps** animations.
