@@ -86,6 +86,11 @@ import { NumericText } from '@numeric-text/vue';
 | `transition`              | `Transition`       | `{ duration: 550, easing: '...' }` | Custom duration and easing function.                                                                           |
 | `respectMotionPreference` | `boolean`          | `true`                             | If true, disables animation for users with `prefers-reduced-motion`.                                           |
 
+## Limitations
+
+- No multiline support: This is a very specific use case. Adding multiline support would greatly complicate the code and increase the bundle size.
+- No support for ligatures and kerning: Because every character is rendered in its own `<span>`, typographic features like ligatures and kerning are not supported.
+
 ## Why?
 
 Ever since SwiftUI introduced `.numericText`, I have been waiting for a similar solution to arrive on the web. It is an ideal way to draw a user's attention to interface changes — be it a status update, a price change, or a counter increment.
