@@ -3,7 +3,7 @@
 [![NPM Version](https://img.shields.io/npm/v/@numeric-text/core.svg)](https://npmjs.com/package/@numeric-text/core)
 [![Bundle Size 2.38KB](https://img.shields.io/badge/bundle_size-2.38KB-black)](https://bundlephobia.com/package/@numeric-text/core)
 
-A lightweight, framework-agnostic component for text transitions. As the name suggests, this is a dedicated attempt to replicate the behavior and feel of SwiftUI's [.numericText](<https://developer.apple.com/documentation/swiftui/contenttransition/numerictext(value:)>) for the web.
+A lightweight, framework-agnostic component for text transitions. As the name suggests, this is a dedicated attempt to replicate the behavior and feel of SwiftUI’s [.numericText](<https://developer.apple.com/documentation/swiftui/contenttransition/numerictext(value:)>) for the web.
 
 ## Features
 
