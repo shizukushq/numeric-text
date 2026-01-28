@@ -18,6 +18,11 @@ A lightweight, framework-agnostic component for text transitions. As the name su
   - **RTL Support**: Built-in support for Right-to-Left languages like Arabic or Hebrew.
   - **Respects Preferences**: Automatically disables animations for users with `prefers-reduced-motion`.
 
+## Limitations
+
+- No multiline support: This is a very specific use case. Adding multiline support would greatly complicate the code and increase the bundle size.
+- No support for ligatures and kerning: Because every character is rendered in its own `<span>`, typographic features such as ligatures and kerning are not supported.
+
 ## Installation
 
 ```bash
@@ -85,11 +90,6 @@ import { NumericText } from '@numeric-text/vue';
 | `trend`                   | `1 \| 0 \| -1`     | `0`                                | Animation direction (1: up, -1: down, 0: auto-detect based on numbers).                                        |
 | `transition`              | `Transition`       | `{ duration: 550, easing: '...' }` | Custom duration and easing function.                                                                           |
 | `respectMotionPreference` | `boolean`          | `true`                             | If true, disables animation for users with `prefers-reduced-motion`.                                           |
-
-## Limitations
-
-- No multiline support: This is a very specific use case. Adding multiline support would greatly complicate the code and increase the bundle size.
-- No support for ligatures and kerning: Because every character is rendered in its own `<span>`, typographic features like ligatures and kerning are not supported.
 
 ## Why?
 
