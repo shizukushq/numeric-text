@@ -1,5 +1,11 @@
 # @numeric-text/core
 
+## 0.1.4
+
+### Patch Changes
+
+- 293ff98: fix: transition merge order
+
 ## 0.1.3
 
 ### Patch Changes
