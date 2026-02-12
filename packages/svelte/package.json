@@ -1,19 +1,30 @@
 {
   "name": "@numeric-text/svelte",
-  "type": "module",
   "version": "0.1.3",
   "description": "Svelte wrapper for @numeric-text/core",
+  "keywords": [
+    "NumericText",
+    "animated-number",
+    "animated-text",
+    "animation",
+    "numeric-text",
+    "numericText",
+    "swiftui",
+    "text"
+  ],
+  "bugs": {
+    "url": "https://github.com/shizukushq/numeric-text/issues"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shizukushq/numeric-text.git"
   },
-  "bugs": {
-    "url": "https://github.com/shizukushq/numeric-text/issues"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "type": "module",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -23,19 +34,15 @@
       "default": "./dist/index.js"
     }
   },
-  "files": [
-    "dist",
-    "README.md"
-  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "svelte-package",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "dev": "svelte-package -w",
     "package": "svelte-package",
     "package:watch": "svelte-package --watch"
-  },
-  "peerDependencies": {
-    "svelte": "^5"
   },
   "dependencies": {
     "@numeric-text/core": "workspace:*"
@@ -48,14 +55,7 @@
     "svelte-check": "^4.3.5",
     "typescript": "^5.9.3"
   },
-  "keywords": [
-    "swiftui",
-    "NumericText",
-    "numeric-text",
-    "numericText",
-    "animation",
-    "animated-text",
-    "animated-number",
-    "text"
-  ]
+  "peerDependencies": {
+    "svelte": "^5"
+  }
 }

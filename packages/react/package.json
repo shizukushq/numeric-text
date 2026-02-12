@@ -1,19 +1,30 @@
 {
   "name": "@numeric-text/react",
-  "type": "module",
   "version": "0.1.3",
   "description": "React wrapper for @numeric-text/core",
+  "keywords": [
+    "NumericText",
+    "animated-number",
+    "animated-text",
+    "animation",
+    "numeric-text",
+    "numericText",
+    "swiftui",
+    "text"
+  ],
+  "bugs": {
+    "url": "https://github.com/shizukushq/numeric-text/issues"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shizukushq/numeric-text.git"
   },
-  "bugs": {
-    "url": "https://github.com/shizukushq/numeric-text/issues"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "type": "module",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -22,16 +33,12 @@
       "import": "./dist/index.js"
     }
   },
-  "files": [
-    "dist",
-    "README.md"
-  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "bunchee",
     "dev": "bunchee --watch"
-  },
-  "peerDependencies": {
-    "react": "^18 || ^19"
   },
   "dependencies": {
     "@numeric-text/core": "workspace:*"
@@ -40,16 +47,9 @@
     "@types/react": "^19.2.9",
     "bunchee": "^6.9.4",
     "react": "^19.2.3",
-    "typescript": "^5.0.0"
+    "typescript": "^5.9.3"
   },
-  "keywords": [
-    "swiftui",
-    "NumericText",
-    "numeric-text",
-    "numericText",
-    "animation",
-    "animated-text",
-    "animated-number",
-    "text"
-  ]
+  "peerDependencies": {
+    "react": "^18 || ^19"
+  }
 }
