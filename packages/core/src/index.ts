@@ -62,7 +62,7 @@ class NumericText extends ServerSafeHTMLElement {
   }
 
   setOptions(opts: NumericTextOptions) {
-    if (opts.transition) this.transition = { ...opts.transition, ...DEFAULT_TRANSITION }
+    if (opts.transition) this.transition = { ...DEFAULT_TRANSITION, ...opts.transition }
     if (typeof opts.trend === 'number') this.trend = opts.trend
     if (typeof opts.respectMotionPreference === 'boolean') this.respectMotionPreference = opts.respectMotionPreference
   }
