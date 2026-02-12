@@ -31,6 +31,7 @@ npm install @numeric-text/core
 
 # Framework Wrappers
 npm install @numeric-text/svelte
+npm install @numeric-text/solid
 npm install @numeric-text/react
 npm install @numeric-text/vue
 ```
@@ -43,13 +44,13 @@ npm install @numeric-text/vue
 <numeric-text></numeric-text>
 
 <script type="module">
-  import '@numeric-text/core';
+  import '@numeric-text/core'
   // Using CDN (without bundler):
   // import 'https://esm.sh/@numeric-text/core'
 
-  const text = document.querySelector('numeric-text');
+  const text = document.querySelector('numeric-text')
   // set initial value
-  text.value = 'text'; // or text.update('text', false)
+  text.value = 'text' // or text.update('text', false)
 </script>
 ```
 
@@ -57,16 +58,18 @@ npm install @numeric-text/vue
 
 ```svelte
 <script lang="ts">
-  import { NumericText } from '@numeric-text/svelte';
+  import NumericText from '@numeric-text/svelte'
 </script>
 
 <NumericText value="text" />
 ```
 
-### React
+### React/Solid.js
 
 ```tsx
-import { NumericText } from '@numeric-text/react';
+import NumericText from '@numeric-text/react'
+// or
+import NumericText from '@numeric-text/solid'
 
 <NumericText value="text" />
 ```
@@ -75,7 +78,7 @@ import { NumericText } from '@numeric-text/react';
 
 ```vue
 <script lang="ts" setup>
-import { NumericText } from '@numeric-text/vue';
+import NumericText from '@numeric-text/vue'
 </script>
 
 <NumericText value="text" />
