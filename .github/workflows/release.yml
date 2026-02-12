@@ -23,7 +23,7 @@ jobs:
           bun-version: latest
 
       - name: Setup npmrc
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
       - run: bun i --frozen-lockfile
 
@@ -36,8 +36,8 @@ jobs:
         with:
           publish: bun run ci:publish
           version: bun run ci:version
-          commit: 'chore: version packages'
-          title: 'chore: version packages'
+          commit: "chore: version packages"
+          title: "chore: version packages"
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
