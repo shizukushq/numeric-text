@@ -36,7 +36,7 @@
     },
     "packages/solid": {
       "name": "@numeric-text/solid",
-      "version": "0.1.2",
+      "version": "0.1.3",
       "dependencies": {
         "@numeric-text/core": "workspace:*",
       },
