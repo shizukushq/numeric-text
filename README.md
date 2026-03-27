@@ -2,7 +2,7 @@
 
 [![NPM version](https://badgen.net/npm/v/@numeric-text/core?color=0&labelColor=0)](https://npmjs.com/package/@numeric-text/core)
 [![bundle size](https://badgen.net/badge/bundle%20size/2.38KB?color=0&labelColor=0)](https://bundlephobia.com/package/@numeric-text/core)
-[![playground](https://badgen.net/badge/p/playground?label=&color=0&labelColor=0)](https://numeric-text-playground.shizukushq.workers.dev)
+[![playground](https://badgen.net/badge/p/playground?label=&color=0&labelColor=0)](https://play-numeric-text.pages.dev)
 
 A lightweight, framework-agnostic component for text transitions. As the name suggests, this is a dedicated attempt to replicate the behavior and feel of SwiftUI’s [.numericText](<https://developer.apple.com/documentation/swiftui/contenttransition/numerictext(value:)>) for the web.
 
